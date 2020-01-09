@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { AuthComponent } from './authentication/auth/auth.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
 
+import {MatCardModule} from '@angular/material/card';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
     AppRoutingModule,
     AmplifyAngularModule,
     DragDropModule,
-    
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [AmplifyService],
   bootstrap: [AppComponent]

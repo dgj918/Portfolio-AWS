@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 
+
 @Component({
   selector: 'app-bug-tracker',
   templateUrl: './bug-tracker.component.html',
@@ -14,12 +15,16 @@ export class BugTrackerComponent implements OnInit {
     'Fall asleep'
   ];
 
-  done = [
+  doing = [
     'Get up',
     'Brush teeth',
     'Take a shower',
     'Check e-mail',
     'Walk dog'
+  ];
+
+  done = [
+    'outline'
   ];
 
   constructor() { }
