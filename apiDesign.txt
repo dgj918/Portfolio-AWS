@@ -1,0 +1,17 @@
+/project
+    - get
+    - post
+    - put
+    - delete
+
+/story
+    - get 
+    - post
+    - put
+    - delete
+
+/subtask
+    - get 
+    - post
+    - put 
+    - delete

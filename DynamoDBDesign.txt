@@ -13,7 +13,7 @@ Step 1: Define the access patterns you think you’ll need
 
 
 Step 2: Create a DynamoDB table with three generic attributes: “partition key”, “sort key”, and “data”
-Partition Key       Sort Key        Data                    Date_Started    Estimate    Time_Logged
+Partition Key       Sort Key        Data                        Title   Date_Started    Estimate    Time_Logged
 user ID             Project ID      Status
 user ID             Story ID        Status#ProjectID       
 user ID             Sub Task ID     Status#ProjectID#StoryID

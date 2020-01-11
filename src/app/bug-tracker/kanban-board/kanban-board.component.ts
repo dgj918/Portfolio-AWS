@@ -9,22 +9,18 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class KanbanBoardComponent implements OnInit {
   todo = [
-    'Get to work',
-    'Pick up groceries',
-    'Go home',
-    'Fall asleep'
+    'Create API Yaml',
+    'Deploy API',
+    'Create Lambda Yaml',
+    'Deploy Lamabdas'
   ];
 
   doing = [
-    'Get up',
-    'Brush teeth',
-    'Take a shower',
-    'Check e-mail',
-    'Walk dog'
+    ''
   ];
 
   done = [
-    'outline'
+    ''
   ];
 
   constructor() { }

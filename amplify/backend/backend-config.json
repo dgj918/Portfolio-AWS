@@ -6,26 +6,17 @@
 			"dependsOn": []
 		}
 	},
-	"api": {
-		"bugTracker": {
-			"service": "AppSync",
-			"providerPlugin": "awscloudformation",
-			"output": {
-				"authConfig": {
-					"additionalAuthenticationProviders": [],
-					"defaultAuthentication": {
-						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
-						"userPoolConfig": {
-							"userPoolId": "authportfolioaaf36f6c"
-						}
-					}
-				}
-			}
-		}
-	},
+	"api": {},
 	"hosting": {
 		"S3AndCloudFront": {
 			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {},
+	"storage": {
+		"BugTrackerTable": {
+			"service": "DynamoDB",
 			"providerPlugin": "awscloudformation"
 		}
 	}
