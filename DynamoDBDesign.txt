@@ -1,0 +1,30 @@
+Step 1: Define the access patterns you think you’ll need
+
+1. Get issue by ID
+2. Get issue by State (doing, done, todo, closed)
+3. Get project by ID
+4. Get sub task by issue ID
+5. Get sub task by ID
+6. story by type
+7. story by status
+8. sub task by status
+9. List all stories of a given project
+10. List all sub task of a given story
+
+
+Step 2: Create a DynamoDB table with three generic attributes: “partition key”, “sort key”, and “data”
+Partition Key       Sort Key        Data                    Date_Started    Estimate    Time_Logged
+user ID             Project ID      Status
+user ID             Story ID        Status#ProjectID       
+user ID             Sub Task ID     Status#ProjectID#StoryID
+
+
+Step 3: Create an item in the DynamoDB table for each record in each entity (non-join) table
+Partition Key       Sort Key (GSI PK)   Data (GSI SK)
+Project ID          Title#Status        Closed
+Story ID            ProjectID#Status    Closed
+Sub Task ID         StoryID#Status      Closed
+
+Step 4: Represent many-to-many relationships with adjacency lists
+
+Step 5 (optional): Create more GSIs to support additional access pattterns

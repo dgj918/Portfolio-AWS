@@ -3,11 +3,11 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 
 
 @Component({
-  selector: 'app-bug-tracker',
-  templateUrl: './bug-tracker.component.html',
-  styleUrls: ['./bug-tracker.component.scss']
+  selector: 'app-kanban-board',
+  templateUrl: './kanban-board.component.html',
+  styleUrls: ['./kanban-board.component.scss']
 })
-export class BugTrackerComponent implements OnInit {
+export class KanbanBoardComponent implements OnInit {
   todo = [
     'Get to work',
     'Pick up groceries',

@@ -7,16 +7,18 @@ import { AmplifyAngularModule, AmplifyService } from 'aws-amplify-angular'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './authentication/auth/auth.component';
-import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
 
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { KanbanBoardComponent } from './bug-tracker/kanban-board/kanban-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    BugTrackerComponent
+    KanbanBoardComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
