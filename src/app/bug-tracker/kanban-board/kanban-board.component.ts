@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
+import { ProjectsService } from 'src/app/services/projects.service';
 
 
 @Component({
@@ -23,9 +24,13 @@ export class KanbanBoardComponent implements OnInit {
     ''
   ];
 
-  constructor() { }
+  constructor(private projectService: ProjectsService) { }
 
   ngOnInit() {
+
+    this.projectService.getprojects().subscribe((data) =>{
+      console.log(data)
+    })
   }
 
   drop(event: CdkDragDrop<string[]>) {

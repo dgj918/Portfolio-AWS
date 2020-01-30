@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiGateway: 'https://vpfixtbzpl.execute-api.us-east-1.amazonaws.com/dev',
+  cognitoIDServProvider: 'CognitoIdentityServiceProvider.6j9q6u2h7kia6mrvreavft4pqd.'
 };
 
 /*

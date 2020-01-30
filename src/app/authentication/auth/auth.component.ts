@@ -24,9 +24,8 @@ export class AuthComponent implements OnInit {
           this.user = null
         } else {
           this.user = authState.user
-          console.log(this.user.username)
           this.userInfoServ.logInUser(this.user.username)
-          this.router.navigate(['/tracker']);
+          this.router.navigate(['/home']);
         }
       });
   }
