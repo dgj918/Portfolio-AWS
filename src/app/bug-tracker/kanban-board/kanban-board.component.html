@@ -1,4 +1,3 @@
-<app-nav></app-nav>
 <div class="example-container">
   <h2>To do</h2>
 
@@ -13,7 +12,7 @@
     <div *ngFor="let item of todo" cdkDrag>
       <mat-card class="example-card" >
         <mat-card-header>
-          <mat-card-title>{{item}}</mat-card-title>
+          <mat-card-title>{{item.EntityID}}</mat-card-title>
           <mat-card-subtitle>Story</mat-card-subtitle>
         </mat-card-header>
       </mat-card>

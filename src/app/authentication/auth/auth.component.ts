@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AmplifyService } from 'aws-amplify-angular';
 import { Router } from '@angular/router';
 import { UserInfoService } from '../services/user-info.service';
+import { Auth } from 'aws-amplify';
 
 @Component({
   selector: 'app-auth',
@@ -24,7 +25,12 @@ export class AuthComponent implements OnInit {
           this.user = null
         } else {
           this.user = authState.user
-          this.userInfoServ.logInUser(this.user.username)
+          Auth.currentCredentials().then((user) => {
+            this.userInfoServ.updateUserToken(user)
+          })
+          Auth.currentUserInfo().then((userInfo) =>{
+            this.userInfoServ.updateUserName(userInfo.username)
+          })
           this.router.navigate(['/home']);
         }
       });

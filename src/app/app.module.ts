@@ -17,6 +17,8 @@ import { KanbanBoardComponent } from './bug-tracker/kanban-board/kanban-board.co
 import { NavComponent } from './nav/nav.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './interceptor/interceptor';
+import { ProjectsComponent } from './bug-tracker/projects/projects.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AuthInterceptor } from './interceptor/interceptor';
     AuthComponent,
     KanbanBoardComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { AuthInterceptor } from './interceptor/interceptor';
     BrowserAnimationsModule,
     MatCardModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [AmplifyService,
     {

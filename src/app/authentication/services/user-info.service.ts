@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { AmplifyService } from 'aws-amplify-angular';
-import { environment } from '../../../environments/environment'
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +13,7 @@ export class UserInfoService {
   public usertoken: Observable<string>
   public token: any;
 
-  constructor(private amplifyService: AmplifyService) { 
+  constructor() { 
     this.$userName = new BehaviorSubject<string>('')
     this.username = this.$userName.asObservable()
 
@@ -23,10 +21,12 @@ export class UserInfoService {
     this.token = this.$userToken.asObservable()
   }
 
-  logInUser(user: any) { 
-    let accessToken = environment.cognitoIDServProvider + user + '.accessToken'
+  updateUserName(user: any) { 
     this.$userName.next(user)
-    this.$userToken.next(localStorage.getItem(accessToken))
+  }
+
+  updateUserToken(token: any){
+    this.$userToken.next(token)
   }
 
 

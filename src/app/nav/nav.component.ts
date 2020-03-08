@@ -17,4 +17,8 @@ export class NavComponent implements OnInit {
     this.router.navigate(['/kanban'])
   }
 
+  navToProjects(){
+    this.router.navigate(['/projects'])
+  }
+
 }

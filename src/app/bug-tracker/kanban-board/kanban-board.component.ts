@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { ProjectsService } from 'src/app/services/projects.service';
+import { filter, pluck } from 'rxjs/operators';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { ProjectsService } from 'src/app/services/projects.service';
   styleUrls: ['./kanban-board.component.scss']
 })
 export class KanbanBoardComponent implements OnInit {
+  projectsList: any[]
+
   todo = [
     'Create API Yaml',
     'Deploy API',
@@ -27,9 +30,10 @@ export class KanbanBoardComponent implements OnInit {
   constructor(private projectService: ProjectsService) { }
 
   ngOnInit() {
-
     this.projectService.getprojects().subscribe((data) =>{
       console.log(data)
+      let projectData: any = data
+      this.todo = projectData
     })
   }
 
